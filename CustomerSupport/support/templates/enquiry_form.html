@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <meta charset="utf-8"/>
+        <title>Customer Query</title>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/enquiry_form.css' %}"/>
+        <script type="text/javascript" src="{% static 'js/enquiry_form.js' %}"></script>
+    </head>
+    <body>
+        <div style="text-align: center;">
+            <h2>Enquiry Form</h2>
+        </div>
+        <div class="form">
+            <form onsubmit="return validateForm()" method="POST" action="/support/query/submit/{{service_provider}}">
+                Name:</br>
+                <input type="text" id="name" name="name"/></br></br>
+                Email:</br> 
+                <input type="text" id="email" name="email"/></br></br>
+                Phone Number:</br>
+                <input type="text" id="phone" name="phone"/></br></br>
+                Query:</br>
+                <textarea class="textbox" id="query" name="query" placeholder="Enter your query in 30 words or less"></textarea></br></br>
+                <input type="submit" value="Submit"/>
+            </form>
+        </div>
+    </body>
+</html>

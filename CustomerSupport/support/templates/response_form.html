@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <meta charset="utf-8"/>
+        <title>Enquiry Response</title>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/response_form.css' %}"/>
+        <script type="text/javascript" src="{% static 'js/response_form.js' %}"></script>
+    </head>
+    <body>
+        <div style="text-align: center;">
+            <h2>Response Form</h2>
+        </div>
+        <div class="form">
+            <form onsubmit="return validateForm()" method="POST" action="/support/response/submit/{{id}}">
+                Name:</br>
+                <input type="text" id="name" name="name" disabled="true" value="{{name}}"/></br></br>
+                Email:</br> 
+                <input type="text" id="email" name="email" disabled="true" value="{{email}}"/></br></br>
+                Phone Number:</br>
+                <input type="text" id="phone" name="phone" disabled="true" value="{{phone}}"/></br></br>
+                Query:</br>
+                <textarea class="textbox" id="query" name="query" disabled="true">{{query}}</textarea></br></br>
+                Response:</br>
+                <textarea class="textbox" id="response" name="response" placeholder="Enter your response in 30 words or less"></textarea></br></br>
+                <input type="submit" value="Submit"/>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form{
+    margin: auto; 
+    width: 25%; 
+    padding: 15px;
+    border: 1px solid grey;
+    border-radius: 3px;
+}
+
+.textbox{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    width: 90%;
+}
+
+input[type=text]{
+    width: 90%;
+}
+
+@media screen and (max-width: 975px){
+    .form{
+        width: 40%; 
+    }   
+}
+
+@media screen and (max-width: 640px){
+    .form{
+        width: 50%; 
+    }   
+}
+
+@media screen and (max-width: 480px){
+    .form{
+        width: 85%; 
+    }   
+}

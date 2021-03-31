@@ -1,0 +1,45 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form{
+    margin: auto; 
+    width: 25%; 
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 3px;
+}
+
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td, th{
+    border: 1px solid black; 
+    padding: 5px;
+}
+
+.table-container{
+    margin: auto; 
+    width: max-content; 
+    padding: 10px;
+}
+
+@media screen and (max-width: 975px){
+    .form{
+        width: 40%; 
+    }   
+}
+
+@media screen and (max-width: 640px){
+    .form{
+        width: 50%; 
+    }   
+}
+
+@media screen and (max-width: 480px){
+    .form{
+        width: 85%; 
+    }   
+}

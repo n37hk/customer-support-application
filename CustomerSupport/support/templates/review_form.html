@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <meta charset="utf-8"/>
+        <title>Support Review</title>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/review_form.css' %}"/>
+        <script type="text/javascript" src="{% static 'js/review_form.js' %}"></script>
+    </head>
+    <bod>
+        <div style="text-align: center;">
+            <h2>Support Review Form</h2>
+        </div>
+        <div class="form">
+            <form method="POST" onsubmit="return validateForm()" action="/support/review/submit/{{id}}">
+                How would you rate our support teams's response?</br></br>
+                <input type="radio" id="reviewSatisfied" name="review" value="satisfied"/>Satisfied</br></br>
+                <input type="radio" id="reviewUnsatisfied" name="review" value="unsatisfied"/>Unsatisfied</br></br>
+                <input type="submit" value="Submit"/>
+            </form>
+        </div>
+    </bod>
+</html>

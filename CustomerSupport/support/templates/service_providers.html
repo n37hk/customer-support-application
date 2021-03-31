@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <title>
+            Service Providers
+        </title>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/service_providers.css' %}"/>
+        <script type="text/javascript" src="{% static 'js/service_providers.js' %}"></script>
+    </head>
+    <body >
+        <div style="text-align: center;">
+            <h2>Manage Service Providers</h2>
+        </div>
+        <div>
+            <div class="form">
+                Add Service Provider: </br></br>
+                <form method="POST" action="/support/service-providers/add">
+                    Name:
+                    <input type="text" id="name" name="name"/></br></br>
+                    Email: 
+                    <input type="text" id="email" name="email"/></br></br>
+                    <input type="submit" value="Add"/>
+                </form>
+            </div>
+        </div>
+        <div>
+            <div class="table-container">
+                <table>
+                    <tr >
+                        {% for h in service_provider_list.headers %}
+                            <th>
+                                {{h}}
+                            </th>
+                        {% endfor %}
+                        <th >
+                            Support
+                        </th>
+                    </tr>
+                    {% for r in service_provider_list.rows %}
+                        <tr>
+                            {% for c in r %}
+                                <td >
+                                    {{c}}
+                                </td>
+                            {% endfor %}
+                            <td >
+                                <a href="/support/query/{{r.0}}" target="_blank">View Form</a>
+                            </td>
+                            <td >
+                                <a href="#" onclick="deleteEntry('{{r.0}}')">Delete</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
