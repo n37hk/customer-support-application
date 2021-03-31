@@ -37,7 +37,7 @@
 </br>
 
 ### To view a demo of the app please visit the following link
-<a href="https://drive.google.com/file/d/1tPgOtXxiJiXoL0DpgkR5qfmCPeYq6nWS/view?usp=sharing">Demo Video</a></br></br>
+<a href="https://drive.google.com/file/d/1tPgOtXxiJiXoL0DpgkR5qfmCPeYq6nWS/view?usp=sharing" target="_blank">Demo Video</a></br></br>
 
 ### Notes:-
 <ul>
